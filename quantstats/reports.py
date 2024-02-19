@@ -480,13 +480,7 @@ def html(
     tpl = _regex.sub(r"\{\{(.*?)\}\}", "", tpl)
     tpl = tpl.replace("white-space:pre;", "")
 
-    if output is None:
-        # _open_html(tpl)
-        _download_html(tpl, download_filename)
-        return
-
-    with open(output, "w", encoding="utf-8") as f:
-        f.write(tpl)
+    print(tpl)
 
 
 def full(
